@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sekcja Komputery -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Komputery"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_computer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:minHeight="48dp" />
+
+            <ImageView
+                android:id="@+id/image_computer"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/komputer1"/>
+
+            <TextView
+                android:id="@+id/text_computer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_computer_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/text_computer_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <!-- Dodaj cenę bazową komputera -->
+            <TextView
+                android:id="@+id/text_base_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cena podstawowa: 0.00 zł"
+                android:textStyle="bold"/>
+
+            <!-- Sekcja kontroli ilości -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/button_decrease"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:max="10"
+                    android:progress="1"/>
+
+                <TextView
+                    android:id="@+id/text_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 szt."
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/button_increase"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <!-- Pole tekstowe dla imienia i nazwiska -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Imię i Nazwisko zamawiającego">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Separator -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="24dp"/>
+
+            <!-- Sekcja Myszki -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Myszki"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_mouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:minHeight="48dp" />
+
+            <ImageView
+                android:id="@+id/image_mouse"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/myszka1"/>
+
+            <TextView
+                android:id="@+id/text_mouse_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_mouse_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/text_mouse_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <!-- Po sekcji myszki -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/button_decrease_mouse"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_quantity_mouse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:max="10"
+                    android:progress="0"/>
+
+                <TextView
+                    android:id="@+id/text_quantity_mouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 szt."
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/button_increase_mouse"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <!-- Po sekcji myszki -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_mouse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dodaj myszkę do zamówienia"
+                    style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"/>
+
+                <TextView
+                    android:id="@+id/text_mouse_addon_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ 0.00 zł"
+                    android:textColor="@android:color/holo_green_dark"/>
+            </LinearLayout>
+
+            <!-- Sekcja Klawiatury -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Klawiatury"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/image_keyboard"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/klawiatura1"/>
+
+            <TextView
+                android:id="@+id/text_keyboard_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_keyboard_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/text_keyboard_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <!-- Kontrolki ilości dla klawiatury -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/button_decrease_keyboard"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_quantity_keyboard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:max="10"
+                    android:progress="0"/>
+
+                <TextView
+                    android:id="@+id/text_quantity_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 szt."
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/button_increase_keyboard"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <!-- Po sekcji klawiatury -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_keyboard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dodaj klawiaturę do zamówienia"
+                    style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"/>
+
+                <TextView
+                    android:id="@+id/text_keyboard_addon_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ 0.00 zł"
+                    android:textColor="@android:color/holo_green_dark"/>
+            </LinearLayout>
+
+            <!-- Sekcja Monitory -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monitory"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/image_monitor"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/monitor1"/>
+
+            <TextView
+                android:id="@+id/text_monitor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_monitor_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/text_monitor_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <!-- Kontrolki ilości dla monitora -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/button_decrease_monitor"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_quantity_monitor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:max="10"
+                    android:progress="0"/>
+
+                <TextView
+                    android:id="@+id/text_quantity_monitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 szt."
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <Button
+                    android:id="@+id/button_increase_monitor"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="24sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <!-- Po sekcji monitora -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_monitor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dodaj monitor do zamówienia"
+                    style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"/>
+
+                <TextView
+                    android:id="@+id/text_monitor_addon_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ 0.00 zł"
+                    android:textColor="@android:color/holo_green_dark"/>
+            </LinearLayout>
+
+            <!-- Przed przyciskiem zamówienia -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="16dp"/>
+
+            <!-- Suma zamówienia -->
+            <TextView
+                android:id="@+id/text_total_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suma zamówienia: 0.00 zł"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Przycisk zamówienia -->
+            <Button
+                android:id="@+id/button_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Złóż zamówienie"
+                android:textSize="16sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_shortcuts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

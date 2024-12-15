@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Sklep z komputerami</string>
+    <string name="shortcut_icon">Ikona skrótu</string>
+    <string name="Glowna">Strona główna</string>
+    <string name="Lista">Lista zamówień</string>
+    <string name="Wyslij">Wyślij sms</string>
+    <string name="Udostepnij">Udostepnij</string>
+    <string name="O_programie">O programie</string>
+    <string-array name="mouse_options">
+        <item>Mysz Dell MS116 - 35 zł</item>
+        <item>Mysz Logitech M720</item>
+        <item>Mysz Razer DeathAdder</item>
+    </string-array>
+
+    <string-array name="keyboard_options">
+        <item>Klawiatura TITANUM TK101 USB - 19 zł</item>
+        <item>Klawiatura Logitech K800</item>
+        <item>Klawiatura SteelSeries Apex Pro</item>
+    </string-array>
+
+    <string-array name="camera_options">
+        <item>Monitor 4K 32" - 1500 zł</item>
+        <item>Monitor 1080p 24"</item>
+        <item>Monitor LG UltraWide</item>
+    </string-array>
+</resources>
